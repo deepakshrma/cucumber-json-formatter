@@ -1,7 +1,7 @@
 {
   "name": "@deepakvishwakarma/cucumber-json-formatter",
   "version": "0.0.1",
-  "description": "",
+  "description": "This module is wrapper around [json-formatter](https://github.com/cucumber/json-formatter). This module includes latest binary of `cucumber/json-formatter(v19.0.0)` for linux, mac and windows system.",
   "main": "lib/main.js",
   "bin": {
     "cucumber-json-formatter": "lib/main.js"
@@ -9,9 +9,27 @@
   "scripts": {
     "test": "mocha"
   },
-  "keywords": [],
+  "keywords": [
+    "cucumber",
+    "cypress",
+    "testing"
+  ],
   "author": "xdeepakv",
-  "license": "ISC",
+  "homepage": "https://github.com/deepakshrma",
+  "bugs": "https://github.com/deepakshrma/cucumber-json-formatter/issues",
+  "license": "MIT",
+  "files": [
+    "LICENSE",
+    "README.md",
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/deepakshrma/cucumber-json-formatter.git"
+  },
+  "engines": {
+    "node": ">=0.12.0"
+  },
   "devDependencies": {
     "mocha": "^10.0.0"
   }
