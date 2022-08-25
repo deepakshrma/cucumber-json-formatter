@@ -1,6 +1,6 @@
 {
   "name": "@deepakvishwakarma/cucumber-json-formatter",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "This module is wrapper around [json-formatter](https://github.com/cucumber/json-formatter). This module includes latest binary of `cucumber/json-formatter(v19.0.0)` for linux, mac and windows system.",
   "main": "lib/main.js",
   "bin": {
