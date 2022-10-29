@@ -49,3 +49,36 @@ This module can also used as dependency. You can use the absolute path for `main
   }
 }
 ```
+
+### Note:
+
+`Paweł Kruszczyński` found strenge issue related to settings in latest node. I have not test the issue. However, If you find such issue. You can also follow the setting that `Paweł` has mentioned as below.
+
+**Explanation:**
+_Maybe I have some new version of nodejs or something, but "formatter" value is called with spawn, from child_process package, so the JS script cannot be directly invoked, but with "node" and script as args, it works flawlessly, so if you can add it to your README, maybe someone struggles with same problem._
+
+```json
+{
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^13.0.1",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.1.4",
+    "@deepakvishwakarma/cucumber-json-formatter": "^0.0.2",
+    "cypress": "^10.10.0",
+    "cypress-xpath": "^2.0.1",
+    "esbuild": "^0.15.8"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "filterSpecs": true,
+    "omitFiltered": true,
+    "json": {
+      "enabled": true,
+      "output": "cypress/cucumber-json/log.json",
+      "formatter": "node",
+      "args": [
+        "./node_modules/@deepakvishwakarma/cucumber-json-formatter/lib/main.js"
+      ]
+    }
+  }
+}
+```
